@@ -91,6 +91,17 @@
         .btn-outline { border: 1px solid var(--border); color: white; background: rgba(255,255,255,0.05); }
         .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
 
+        /* --- Custom Button Animation --- */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); border-color: rgba(139, 92, 246, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); border-color: var(--primary); }
+            100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); border-color: rgba(139, 92, 246, 0.5); }
+        }
+        .btn-pulse {
+            animation: pulse-glow 2s infinite;
+            color: #fff;
+        }
+
         /* Profile Image */
         .image-wrapper { position: relative; width: 400px; height: 400px; }
         .image-wrapper::before {
@@ -222,13 +233,14 @@
     <header>
         <div class="hero-grid">
             <div class="hero-text">
-                <h2>Master 1 Student</h2>
+                <h2>Master 2 Student</h2>
                 <h1>Cyber Security &<br>Web Architect</h1>
                 <p>Building the bridge between robust backend systems and secure digital infrastructures.</p>
                 
                 <div class="btn-group">
                     <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="cv.pdf" target="_blank" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
+                    <a href="RecomendationsLetters.pdf" target="_blank" class="btn btn-outline btn-pulse"><i class="fa-solid fa-file-signature"></i> Recommendation Letters</a>
                     <a href="https://github.com/mutseeem" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/el-moatassam-mourksi-55908a320/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
@@ -244,7 +256,7 @@
         <div class="about-card">
             <h3>About <span>Me</span></h3>
             <p>
-                Dedicated M1 Cyber Security student with a strong academic foundation in Information Systems (ranked Top 10). I combine theoretical knowledge with practical expertise in Full Stack development (Next.js, Spring Boot) and backend architecture. Proven experience in leading digitalization projects for university institutions, ranging from exam management platforms to SaaS attendance solutions.
+                Dedicated M2 Cyber Security student with a strong academic foundation in Information Systems (ranked Top 10). I combine theoretical knowledge with practical expertise in Full Stack development (Next.js, Spring Boot) and backend architecture. Proven experience in leading digitalization projects for university institutions, ranging from exam management platforms to SaaS attendance solutions.
             </p>
         </div>
     </section>
@@ -267,7 +279,7 @@
         </div>
 
         <div class="project-card">
-            <a href="https://www.browebs-se.publicvm.com/" target="_blank" class="browser-mockup">
+            <a href="https://browebs.netlify.app" target="_blank" class="browser-mockup">
                 <div class="browser-header">
                     <div class="dot" style="background:#ff5f56"></div>
                     <div class="dot" style="background:#ffbd2e"></div>
@@ -285,7 +297,7 @@
                     <span class="tag">Business</span>
                 </div>
                 <p>A digital agency platform helping small businesses order and create custom websites. Features a client-facing order system and admin dashboard.</p>
-                <a href="https://www.browebs-se.publicvm.com/" target="_blank" class="btn btn-outline" style="font-size:0.9rem">Visit Site</a>
+                <a href="https://browebs.netlify.app" target="_blank" class="btn btn-outline" style="font-size:0.9rem">Visit Site</a>
             </div>
         </div>
 
@@ -333,6 +345,11 @@
                 <p>A digital attendance system for HIS University. Professors mark presence digitally, and admins get real-time statistics on class activity.</p>
                 <a href="https://attendance.his.edu.dz/" target="_blank" class="btn btn-outline" style="font-size:0.9rem">Visit Platform</a>
             </div>
+        </div>
+        
+        <div style="text-align: center; padding-top: 40px;">
+            <p style="color: var(--text-dim); margin-bottom: 20px; font-size: 1.1rem;">For more projects, please visit my GitHub.</p>
+            <a href="https://github.com/mutseeem" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> Go to GitHub</a>
         </div>
 
     </section>
